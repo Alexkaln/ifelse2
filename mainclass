@@ -1,0 +1,37 @@
+public class mainclass {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Выберите номер:");
+        int N = in.nextInt();
+        if (N>3||N<1) {
+            System.out.println("Значение не верно");
+            System.exit(0);}
+        System.out.println("Выберите вариант:");
+        int number = in.nextInt();
+        if (number>3||number<1) {System.out.println("Значение не верно");
+            System.exit(0);}
+        System.out.println("Внесите купюру 5,10,20");
+        int money = in.nextInt();
+        System.out.print("Тема открытки: ");
+        switch (N)
+        {case 1:
+                System.out.println("Новогодние, вариант "+ number);break;
+            case 2:
+                System.out.println("С Днем Рождения, вариант "+ number);break;
+            case 3:
+                System.out.println("С Днем Защитника отечества, вариант "+ number);break;}
+        int currentMoney = money - 2;
+        System.out.print("Сдача: ");
+        while (currentMoney != 0) {
+            if (currentMoney > 10) {
+                System.out.print("10р + ");
+                currentMoney -= 10;
+            } else if (currentMoney > 5) {
+                System.out.print("5р + ");
+                currentMoney -= 5;
+            } else if (currentMoney > 2) {
+                System.out.print("2р + ");
+                currentMoney -= 2;
+            } else {
+                System.out.print("1р ");
+                currentMoney -= 1;
+            }}}}
